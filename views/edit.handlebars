@@ -1,0 +1,16 @@
+<h1>Altera uma nota </h1>
+<form class="form" action="/students/updatestudent" method="POST">
+<input type="hidden" name="id" value="{{english.id}}">
+<div class="form-control">
+    <label class="form-control">Media 01:</label>
+    <input type="number" name="num1" placeholder="Insira a media aqui" value="{{english.num1}}">
+    <br>
+    <label class="form-control">Media 02:</label>
+    <input type="number" name="num2" placeholder="Insira a media aqui" value="{{english.num2}}">
+    <br>
+    <label class="form-control">Media 03:</label>
+    <input type="number" name="num3" placeholder="Insira a media aqui" value="{{english.num3}}">
+    <br>
+</div>
+<input type="submit" value="Editar">
+</form>

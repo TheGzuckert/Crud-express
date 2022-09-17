@@ -1,0 +1,8 @@
+<h1>Alunos</h1>
+<div class="books-container">
+    {{#each english}}
+        <div>#{{this.id}} - <span class="bold">
+            <a href="/students/{{this.id}}">{{this.nome}}</a>
+            </span> - Media:  {{this.media}} </div>
+    {{/each}}
+</div>

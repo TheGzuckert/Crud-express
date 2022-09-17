@@ -1,0 +1,28 @@
+<div id="book-page">
+    <a href="/students">Voltar</a>
+    <div class="container">
+        <h1>{{english.nome}}</h1>
+        <h3><b>RG do aluno: </b>{{english.rg}}</h3>
+        <br>
+        <h3>CPF do aluno: {{english.cpf}}</h3>
+        <br>
+        <h3><b>Notas do aluno: </b></h3>
+        <br>
+        <p><b>Nota 01: </b>{{english.num1}}</p>
+        <br>
+        <p><b>Nota 02: </b>{{english.num2}}</p>
+        <br>
+        <p><b>Nota 03: </b>{{english.num3}}</p>
+        <br>
+        <p><b>Media:  </b>{{english.media}}</p>
+        <br>
+        <div class="actions">
+            <a href="/students/edit/{{english.id}}">Corrigir nota</a>
+            <form action="/students/remove/{{english.id}}"  method="POST">
+            <input type="submit" value="Cancelar matricula">
+            </form>
+        </div>
+    </div>
+</div>
+
+
