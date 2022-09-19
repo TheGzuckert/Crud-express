@@ -21,6 +21,7 @@ app.get('/', function (req, res) {
     res.render('home')
 })
 
+//Cadastro dos alunos
 app.post('/eschool/student', function (req, res) {
     const nome = req.body.nome
     const cpf = req.body.cpf
@@ -42,6 +43,7 @@ app.post('/eschool/student', function (req, res) {
     })
 })
 
+//Mostra os alunos
 app.get('/students', function(req, res){
     const sql = "SELECT * FROM english;"
     pool.query(sql, function(err, data){
@@ -64,7 +66,7 @@ app.get('/students', function(req,res){
     })
 })
 
-//Para mostrar especifico
+//Para um aluno espefico
 app.get('/students/:id',function(req,res){
     const id = req.params.id
     const sql = `SELECT * FROM english WHERE id = ${id}`
@@ -77,7 +79,7 @@ app.get('/students/:id',function(req,res){
     })
 })
 
-//Editar nota
+//Edita as notas de um aluno espefico
 app.get('/students/edit/:id',function(req,res){
     const id = req.params.id
     const sql = `SELECT * FROM english WHERE id = ${id}`
@@ -90,7 +92,7 @@ app.get('/students/edit/:id',function(req,res){
         })
     })
 
-//Receber e atualizar nota
+//Receber e atualizar notas
 app.post('/students/updatestudent', function(req,res){
     const id = req.body.id
     const num1 = parseInt(req.body.num1)
@@ -109,7 +111,7 @@ app.post('/students/updatestudent', function(req,res){
     })
 })
 
-//Para excluir
+//Para excluir o usuari o dentro do banco de dados
 app.post('/students/remove/:id', function(req,res){
     const id = req.params.id
     const sql = `DELETE FROM english WHERE id = ${id}`
