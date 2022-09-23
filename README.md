@@ -13,6 +13,6 @@ Mysql - banco relacional
 `npm install` para que seja criada a node_modules
 
 ## Run
-`npm start` para rodar o projeto e assim sera criado uma porta 
+`npm start` para rodar o projeto e assim sera criado uma porta dentro do localhost
 
-localhost:300 
+`localhost:3000`
